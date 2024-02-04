@@ -1,0 +1,10 @@
+/* 设置背景图片 */
+body {
+  background: url(/img/bg.jpg);
+  background-attachment: fixed;
+  background-size: cover;  
+}
+#board {
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}

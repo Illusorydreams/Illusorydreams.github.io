@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
+<html lang="zh-CN" >
 
 
 
@@ -28,6 +28,8 @@
 <meta property="article:author" content="illusory">
 <meta name="twitter:card" content="summary_large_image">
   
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
   
   
   <title>Hello World - illusory&#39;s blog</title>
@@ -59,9 +61,11 @@
 
   <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
-  
 
+
+
+  
+<link rel="stylesheet" href="/css/my.css">
 
 
 
@@ -86,6 +90,123 @@
 
 <body>
   
+    
+
+<style type="text/css">
+    @keyframes spin3D {
+        from {
+            transform: rotate3d(0.5, 0.5, 0.5, 360deg);
+        }
+
+        to {
+            transform: rotate3d(0deg);
+        }
+    }
+
+    #loading {
+        height: 100%;
+        background-color: #172d4781;
+        backdrop-filter: saturate(100%) blur(10px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        z-index: 99999999;
+    }
+
+    .spinner-box {
+        width: 300px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+    }
+
+    .leo {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+
+    .blue-orbit {
+        width: 175px;
+        height: 175px;
+        border: 2px solid #1a91fa;
+        animation: spin3D 3s linear .2s infinite;
+    }
+
+    .green-orbit {
+        width: 135px;
+        height: 135px;
+        border: 2px solid #00ffdd;
+        animation: spin3D 2s linear 0s infinite;
+    }
+
+    .red-orbit {
+        width: 100px;
+        height: 100px;
+        border: 2px solid #d75151;
+        animation: spin3D 1s linear 0s infinite;
+    }
+
+    .white-orbit-a {
+        width: 70px;
+        height: 70px;
+        border: 1px solid #faf5f5;
+        animation: spin3D 3s linear 0s infinite;
+    }
+
+    .white-orbit-b {
+        width: 70px;
+        height: 70px;
+        border: 1px solid #faf5f5;
+        animation: spin3D 1.5s linear 0s infinite;
+    }
+
+    .nucleus {
+        width: 1px;
+        height: 1px;
+        border: 1px solid #ffffff;
+        animation: spin3D 1s linear 0s infinite;
+    }
+</style>
+
+<div id="loading">
+    <div class="spinner-box">
+        <div class="blue-orbit leo"></div>
+        <div class="green-orbit leo"></div>
+        <div class="red-orbit leo"></div>
+        <div class="white-orbit-a leo"></div>
+        <div class="white-orbit-b leo"></div>
+        <div class="nucleus leo"></div>
+    </div>
+</div>
+
+<script>
+    (function () {
+        const loaded = function () {
+            window.onload = function () {
+                const loader = document.getElementById("loading");
+                loader.className = "fadeout";
+                setTimeout(function () {
+                    loader.style.display = "none";
+                }, 
+                500
+                );
+            }
+        };
+        loaded();
+    })();
+</script>
+  
+  
 
   <header>
     
@@ -94,7 +215,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>illusory&#39;s blog</strong>
+      <strong class="navbar-title">illusory&#39;s blog</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -188,12 +309,6 @@
           
         
         
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
-              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
-            </a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -202,9 +317,9 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/none.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
@@ -467,9 +582,33 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a><br> <span id="span"></span> <script type="text/javascript"> function runtime(){ X = new Date("1/18/2024 8:32:00"); Y = new Date(); T = (Y.getTime()-X.getTime()); M = 24*60*60*1000; a = T/M; A = Math.floor(a); b = (a-A)*24; B = Math.floor(b); c = (b-B)*60; C = Math.floor((b-B)*60); D = Math.floor((c-C)*60); span.innerHTML = "本站苟延残喘了: "+A+"天"+B+"小时"+C+"分"+D+"秒" } setInterval(runtime, 1000); </script> 
     </div>
   
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
   
   
   
@@ -617,7 +756,13 @@
 
   <script  src="/js/local-search.js" ></script>
 
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
+
+
+
+  
+<script src="/js/stars.js"></script>
 
 
 
