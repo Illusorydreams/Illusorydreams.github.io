@@ -11,6 +11,20 @@
     <content type="html"><![CDATA[<h1 id="项目开端"><a href="#项目开端" class="headerlink" title="项目开端"></a>项目开端</h1><p>作为一个苦逼大学生，快毕业了毕设还没开始做,目前知识不足、项目未定、人员暂无。呜呜呜~~</p><p>开整吧！！！！ </p><h1 id="项目概述"><a href="#项目概述" class="headerlink" title="项目概述"></a>项目概述</h1><p><strong>项目名称：</strong> 简易在线答题系统</p><p><strong>项目目标：</strong> 开发一个简易的在线答题系统，允许用户注册、登录、参加不同的答题挑战，并查看自己的答题记录和排名。该系统旨在提供一个平台，让用户可以通过参与答题来学习和测试自己的知识水平。</p><p><strong>目标用户：</strong> 学生、教育工作者以及任何有兴趣通过答题来学习的个人。</p><p><strong>核心功能：</strong></p><ul><li>用户注册和登录</li><li>答题挑战创建（教师&#x2F;管理员功能）</li><li>参加答题挑战</li><li>答题记录和用户排名</li><li>管理员后台管理</li></ul><h1 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h1><p><strong>后端技术：</strong> Python + Flask，因为它们都是高效、易于学习的框架，特别适合快速开发。</p><p><strong>前端技术：</strong> HTML, CSS, JavaScript，加上Vue.js框架来创建动态和响应式的用户界面。</p><p><strong>数据库：</strong> MySQL</p><p><strong>开发工具：</strong> Git用于版本控制，Visual Studio Code&#x3D;</p><h1 id="功能规划"><a href="#功能规划" class="headerlink" title="功能规划"></a>功能规划</h1><ol><li><strong>用户管理：</strong> 实现用户的注册、登录、注销功能，以及用户信息的编辑。</li><li><strong>题库管理：</strong> 开发题库管理功能，允许管理员添加、编辑、删除题目。</li><li><strong>答题挑战：</strong> 用户可以浏览可用的答题挑战，并参与答题，系统需记录用户的答题结果。</li><li><strong>排名和统计：</strong> 根据用户的答题表现生成排名，提供答题统计信息。</li><li><strong>后台管理：</strong> 实现一个简单的后台管理界面，让管理员可以轻松管理用户、题目和答题挑战。</li></ol><h1 id="开发计划"><a href="#开发计划" class="headerlink" title="开发计划"></a>开发计划</h1><ol><li><strong>需求分析和设计（1周）：</strong> 完成更详细的需求分析和系统设计，确定系统的最终结构。</li><li><strong>环境搭建（2天）：</strong> 准备开发环境，包括安装必要的软件和库。</li><li>开发阶段（12周）：<ul><li>用户管理（2周）</li><li>题库管理（2周）</li><li>答题挑战功能（3周）</li><li>排名和统计（2周）</li><li>后台管理（3周）</li></ul></li><li><strong>测试阶段（2周）：</strong> 对系统进行彻底的测试，包括单元测试和集成测试。</li><li><strong>部署和反馈（1周）：</strong> 将系统部署到服务器，收集用户反馈，并进行必要的调整。</li></ol><p>玩的就是真实，开干！！！</p>]]></content>
     
     
+    <categories>
+      
+      <category>项目开发</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>概述</tag>
+      
+      <tag>开发计划</tag>
+      
+    </tags>
     
   </entry>
   
